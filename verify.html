@@ -3,230 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verify Certificate — AICT Global Services Inc.</title>
-  <meta name="description" content="Verify the certification status of organizations certified by AICT Global Services Inc.">
-  <link rel="stylesheet" href="style.css">
+  <title>Verify a Certificate — AICT Global Services</title>
+  <meta name="description" content="Search the AICT Global Services certificate directory to verify the status of management system certifications. Report suspected fraudulent certificates or misuse of certification marks.">
+  <meta property="og:title" content="Verify a Certificate — AICT Global Services">
+  <meta property="og:description" content="Verify the status of certifications issued by AICT Global Services.">
+  <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <a href="#main" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
-  <!-- Header -->
-  <header class="site-header">
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="header-logo" aria-label="AICT Global Services home">
+      <img src="logo.png" alt="AICT Global Services" width="180" height="48">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="verify.html" class="active">Verify</a>
+      <a href="impartiality.html">Impartiality</a>
+      <a href="contact.html">Contact</a>
+      <div class="header-cta">
+        <a href="contact.html" class="btn btn--accent btn--sm">Get Started</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
     <div class="container">
-      <a href="index.html" class="site-logo" aria-label="AICT Global Services — Home">
-        <img src="logo.png" alt="AICT Global Services Inc. logo">
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <ul class="main-nav" role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="impartiality.html">Impartiality</a></li>
-          <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
-          <li><a href="verify.html" class="active">Verify Certificate</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator" aria-hidden="true"></span>
+        <span aria-current="page">Verify a Certificate</span>
       </nav>
+      <h1 class="reveal">Certificate Verification</h1>
+      <p class="reveal reveal-delay-1">Verify the status and scope of management system certifications issued by AICT Global Services. Our public directory provides transparency in accordance with ISO/IEC 17021-1 requirements.</p>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <h1>Certificate Verification</h1>
-        <p class="lead">Verify the certification status of organizations certified by AICT Global Services Inc.</p>
-      </div>
-    </section>
-
-    <!-- About Verification -->
-    <section class="content-section">
-      <div class="container">
-        <h2>About Certificate Verification</h2>
-        <p>
-          In accordance with the requirements of ISO/IEC 17021-1 (Clauses 8.1 and 8.2), AICT
-          Global Services Inc. makes publicly available information about the current status of
-          each management system certification it has granted. This directory enables any
-          interested party to verify whether an organization holds a valid certificate issued
-          by AICT.
-        </p>
-        <p>
-          The information provided includes the name of the certified organization, the scope
-          of certification, the applicable standard, the certificate number, and the current
-          status (active, suspended, or withdrawn).
-        </p>
-      </div>
-    </section>
-
-    <!-- Search / Directory -->
-    <section class="content-section content-section--alt">
-      <div class="container">
-        <h2 class="text-center">Certified Organizations Directory</h2>
-
-        <div class="verify-placeholder">
-          <div style="font-size: 2.5rem; color: #1e5fa8; margin-bottom: 1rem;" aria-hidden="true">&#128270;</div>
-          <h3>Directory Coming Soon</h3>
-          <p>
-            AICT Global Services Inc. has not yet issued any management system certificates.
-            This directory will be populated once AICT's first certificates are granted.
-          </p>
-          <p style="margin-top: 1rem;">
-            If you have questions about the certification status of a specific organization,
-            please contact us at
-            <a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a>.
-          </p>
-        </div>
-
-        <!-- This table will be populated once certificates are issued -->
-        <!--
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Certificate No.</th>
-                <th>Organization</th>
-                <th>Standard</th>
-                <th>Scope</th>
-                <th>Issue Date</th>
-                <th>Expiry Date</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="7" style="text-align: center; padding: 2rem;">No certificates have been issued yet.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        -->
-      </div>
-    </section>
-
-    <!-- Information Provided -->
-    <section class="content-section">
-      <div class="container">
-        <h2>Information Available in the Directory</h2>
-        <p>
-          Once certificates are issued, the following information will be publicly available
-          for each certified organization:
-        </p>
-        <ul>
-          <li><strong>Certificate number</strong> — Unique identifier for each certificate</li>
-          <li><strong>Organization name</strong> — Legal name of the certified organization</li>
-          <li><strong>Standard</strong> — The management system standard against which the organization is certified (e.g., ISO/IEC 27001, ISO/IEC 42001)</li>
-          <li><strong>Scope of certification</strong> — Description of the activities, processes, and locations covered by the certificate</li>
-          <li><strong>Issue date</strong> — Date the certificate was issued or most recently renewed</li>
-          <li><strong>Expiry date</strong> — Date of certificate expiry (end of the three-year certification cycle)</li>
-          <li><strong>Status</strong> — Current status of the certificate (Active, Suspended, or Withdrawn)</li>
-        </ul>
-
-        <div class="notice">
-          <p>
-            <strong>Note:</strong> Suspension of a certificate indicates a temporary interruption
-            of certification, typically due to unresolved nonconformities. A suspended certificate
-            may be restored once the issues are resolved, or withdrawn if they are not resolved
-            within a specified timeframe. Withdrawal indicates that the certificate is no longer
-            valid.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Misuse Reporting -->
-    <section class="content-section content-section--alt">
-      <div class="container">
-        <h2>Reporting Misuse of Certification</h2>
-        <p>
-          If you believe an organization is misrepresenting its certification status or misusing
-          a certificate or certification mark issued by AICT Global Services, please report the
-          matter to us. Misuse of certification may include:
-        </p>
-        <ul>
-          <li>Claiming certification when no valid certificate exists</li>
-          <li>Displaying a suspended or withdrawn certificate as though it were active</li>
-          <li>Misrepresenting the scope, standard, or status of a certificate</li>
-          <li>Using the AICT certification mark in a misleading manner</li>
-        </ul>
-        <div class="notice notice--green">
-          <p>
-            <strong>Report misuse to:</strong>
-            <a href="mailto:complaints@aictglobalservices.com">complaints@aictglobalservices.com</a>
-            with the subject line "Certification Misuse Report."
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-banner">
-      <div class="container">
-        <h2>Interested in Certification?</h2>
-        <p>Contact us to learn more about our certification services and how to begin the process.</p>
-        <a href="contact.html" class="btn btn--primary">Contact AICT</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- SEARCH -->
+  <section class="section">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="logo.png" alt="AICT Global Services Inc.">
-          <p>
-            AICT Global Services Inc. is a certification body providing management system
-            certification audits for information security, AI management, and AI governance standards.
-          </p>
+      <div class="verify-search reveal">
+        <div class="coming-soon-badge">
+          <svg viewBox="0 0 16 16" fill="none" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M8 4.5V8.5L10.5 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Directory Launching Soon
         </div>
-        <div>
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Policies</h4>
-          <ul class="footer-links">
-            <li><a href="impartiality.html">Impartiality Statement</a></li>
-            <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
-            <li><a href="verify.html">Verify a Certificate</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p>162 Furry Creek Drive<br>Furry Creek, BC V8B 1A3<br>Canada</p>
-          <p><a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 AICT Global Services Inc. All rights reserved.</p>
+        <h2>Search the Certificate Directory</h2>
+        <p>Enter an organization name or certificate number to verify the status of a certification issued by AICT Global Services.</p>
+
+        <form class="search-box" action="#" method="get" onsubmit="return false;">
+          <label for="cert-search" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Search by organization name or certificate number</label>
+          <input type="text" id="cert-search" name="q" placeholder="Organization name or certificate number" disabled>
+          <button type="submit" disabled>Search</button>
+        </form>
+
+        <p style="font-size:var(--text-sm);color:var(--text-muted);margin-top:var(--space-md);">The certificate verification directory is currently being developed and will be available when AICT begins issuing certifications. Check back soon.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    (function () {
-      var toggle = document.querySelector('.nav-toggle');
-      var nav = document.querySelector('.main-nav');
-      if (toggle && nav) {
-        toggle.addEventListener('click', function () {
-          var expanded = nav.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', expanded);
-        });
-      }
-    })();
-  </script>
+  <!-- DIRECTORY INFO -->
+  <section class="content-section content-section--bg">
+    <div class="container">
+      <div class="content-block">
 
+        <h2 class="reveal">About the Certificate Directory</h2>
+        <p class="reveal">In accordance with ISO/IEC 17021-1:2015 requirements for openness, AICT maintains a publicly accessible directory of current certifications. This directory enables interested parties, including purchasers, regulators, consumers, and the general public, to verify the certification status of organizations certified by AICT.</p>
+
+        <h3 class="reveal">Information Available in the Directory</h3>
+        <p class="reveal">For each certified organization, the following information is publicly available:</p>
+        <ul class="reveal">
+          <li>Name and address of the certified organization</li>
+          <li>Dates of granting, extending, or renewing certification</li>
+          <li>The standard(s) against which certification has been granted</li>
+          <li>The scope of certification</li>
+          <li>Current certification status (active, suspended, withdrawn)</li>
+          <li>Certificate number</li>
+        </ul>
+
+        <h2 class="reveal">Certificate Contents</h2>
+        <p class="reveal">Certificates issued by AICT Global Services contain the following information:</p>
+        <ul class="reveal">
+          <li>The name and location of the certified organization</li>
+          <li>The effective date and expiration date of the certificate</li>
+          <li>The standard and version certified against</li>
+          <li>The scope of the certified management system</li>
+          <li>A unique certificate identification number</li>
+          <li>The name and contact information of AICT Global Services as the issuing certification body</li>
+          <li>Accreditation mark (where applicable)</li>
+        </ul>
+
+        <h2 class="reveal">Reporting Suspected Fraudulent Certificates</h2>
+        <p class="reveal">If you have reason to believe that a certificate claiming to be issued by AICT Global Services is fraudulent, altered, or otherwise invalid, please report it to us immediately. Fraudulent use of certification documents undermines the trust that certification is designed to provide, and AICT takes all such reports seriously.</p>
+
+        <div class="info-box reveal">
+          <p><strong>Report suspected fraudulent certificates to:</strong> <a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a><br>
+          Please include a copy of the suspected document and any relevant context.</p>
+        </div>
+
+        <h2 class="reveal">Misuse of Certification Marks</h2>
+        <p class="reveal">Certified organizations are authorized to use AICT's certification marks in accordance with the terms specified in their certification agreement. Misuse of certification marks includes:</p>
+        <ul class="reveal">
+          <li>Using the mark after certification has been suspended or withdrawn</li>
+          <li>Using the mark in a misleading manner, such as implying certification covers products or services outside the certified scope</li>
+          <li>Altering the mark or using it in a way that misrepresents its meaning</li>
+          <li>Use by organizations that have never held valid certification from AICT</li>
+        </ul>
+        <p class="reveal">If you are aware of any misuse of AICT's certification marks, please report it to <a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a>. AICT will investigate and take appropriate action, which may include requiring corrective action, suspending or withdrawing certification, and pursuing legal remedies.</p>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="AICT Global Services">
+        <p>AICT Global Services Inc. is an independent Canadian certification body providing management system certification services conforming to ISO/IEC 17021-1:2015.</p>
+        <div class="footer-conformity">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1.5L2 4.5v4c0 4.2 2.6 8.1 6 9 3.4-.9 6-4.8 6-9v-4L8 1.5z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M5.5 8l2 2 3-3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Conforming to ISO/IEC 17021-1:2015</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="services.html">Certification Services</a></li>
+          <li><a href="about.html">About AICT</a></li>
+          <li><a href="verify.html">Verify a Certificate</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Policies &amp; Compliance</h5>
+        <ul>
+          <li><a href="impartiality.html">Impartiality Policy</a></li>
+          <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a></li>
+          <li><a href="mailto:complaints@aictglobalservices.com">complaints@aictglobalservices.com</a></li>
+          <li>British Columbia, Canada</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AICT Global Services Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="impartiality.html">Impartiality</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -3,235 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — AICT Global Services Inc.</title>
-  <meta name="description" content="Contact AICT Global Services Inc. for certification inquiries, complaints, or general information.">
-  <link rel="stylesheet" href="style.css">
+  <title>Contact — AICT Global Services</title>
+  <meta name="description" content="Contact AICT Global Services to discuss certification, request a quote, or learn more about our services. Located in British Columbia, Canada.">
+  <meta property="og:title" content="Contact — AICT Global Services">
+  <meta property="og:description" content="Reach out to AICT Global Services for certification inquiries, quotes, and general information.">
+  <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <a href="#main" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="site-logo" aria-label="AICT Global Services — Home">
-        <img src="logo.png" alt="AICT Global Services Inc. logo">
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <ul class="main-nav" role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="impartiality.html">Impartiality</a></li>
-          <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
-          <li><a href="verify.html">Verify Certificate</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p class="lead">We welcome inquiries about our certification services. Reach out using the information below.</p>
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="header-logo" aria-label="AICT Global Services home">
+      <img src="logo.png" alt="AICT Global Services" width="180" height="48">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="verify.html">Verify</a>
+      <a href="impartiality.html">Impartiality</a>
+      <a href="contact.html" class="active">Contact</a>
+      <div class="header-cta">
+        <a href="contact.html" class="btn btn--accent btn--sm">Get Started</a>
       </div>
-    </section>
+    </nav>
+  </div>
+</header>
 
-    <!-- Contact Content -->
-    <section class="content-section">
-      <div class="container">
-        <div class="contact-grid">
+<!-- MAIN -->
+<main id="main">
 
-          <!-- Contact Information -->
-          <div>
-            <h2>Get in Touch</h2>
-            <p>
-              Whether you are interested in certification, have a question about our services,
-              or need to report a concern, we are here to help.
-            </p>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator" aria-hidden="true"></span>
+        <span aria-current="page">Contact</span>
+      </nav>
+      <h1 class="reveal">Contact Us</h1>
+      <p class="reveal reveal-delay-1">Whether you have questions about our certification services, want to request a quote, or need to report a concern, we are here to help.</p>
+    </div>
+  </section>
 
-            <div style="margin-top: 2rem;">
+  <!-- CONTACT FORM + INFO -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
 
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">&#9993;</div>
-                <div>
-                  <h4>General Inquiries</h4>
-                  <p><a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a></p>
-                </div>
+        <!-- Form -->
+        <div class="reveal">
+          <h2>Send Us a Message</h2>
+          <p>Complete the form below and we will respond within two (2) business days.</p>
+
+          <form class="contact-form" action="#" method="post" onsubmit="return false;">
+            <div class="form-group">
+              <label for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Your full name">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="you@organization.com">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-org">Organization</label>
+              <input type="text" id="contact-org" name="organization" autocomplete="organization" placeholder="Your organization name">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-standard">Standard of Interest</label>
+              <select id="contact-standard" name="standard">
+                <option value="">Select a standard (optional)</option>
+                <option value="iso27001">ISO/IEC 27001:2022 — Information Security</option>
+                <option value="iso42001">ISO/IEC 42001:2023 — AI Management Systems</option>
+                <option value="canciosc101">CAN/CIOSC 101:2019 — Ethical AI &amp; Automated Decisions</option>
+                <option value="canciosc104">CAN/CIOSC 104:2024 — AI Data Governance</option>
+                <option value="multiple">Multiple Standards</option>
+                <option value="other">Other / General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="contact-message" name="message" required placeholder="Tell us about your certification needs or question..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--accent btn--lg">Send Message</button>
+            <p class="form-note">Your information is kept confidential in accordance with our <a href="privacy.html">Privacy Policy</a>.</p>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="reveal reveal-delay-1">
+          <div class="contact-info-card">
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 6l8 5 8-5" stroke="currentColor" stroke-width="1.5"/></svg>
               </div>
-
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">&#9993;</div>
-                <div>
-                  <h4>Principal</h4>
-                  <p><a href="mailto:kal@aictglobalservices.com">kal@aictglobalservices.com</a></p>
-                </div>
+              <div>
+                <h5>General Inquiries</h5>
+                <p><a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a></p>
               </div>
+            </div>
 
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">&#9888;</div>
-                <div>
-                  <h4>Complaints &amp; Appeals</h4>
-                  <p><a href="mailto:complaints@aictglobalservices.com">complaints@aictglobalservices.com</a></p>
-                  <p style="font-size: 0.85rem; color: #6c7a89;">See our <a href="complaints.html">Complaints &amp; Appeals</a> page for full details.</p>
-                </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 6l8 5 8-5" stroke="currentColor" stroke-width="1.5"/></svg>
               </div>
-
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">&#9962;</div>
-                <div>
-                  <h4>Office Address</h4>
-                  <p>
-                    AICT Global Services Inc.<br>
-                    162 Furry Creek Drive<br>
-                    Furry Creek, BC V8B 1A3<br>
-                    Canada
-                  </p>
-                </div>
+              <div>
+                <h5>Complaints &amp; Appeals</h5>
+                <p><a href="mailto:complaints@aictglobalservices.com">complaints@aictglobalservices.com</a></p>
               </div>
+            </div>
 
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true">&#9737;</div>
-                <div>
-                  <h4>Location</h4>
-                  <p>
-                    Furry Creek is located on the Sea-to-Sky corridor in British Columbia,
-                    between Vancouver and Squamish. Our office is approximately 45 minutes
-                    north of Vancouver.
-                  </p>
-                </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M10 2C6 2 2 5 2 5v10s4 3 8 3 8-3 8-3V5s-4-3-8-3z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 10h16" stroke="currentColor" stroke-width="1" opacity="0.3"/><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
               </div>
+              <div>
+                <h5>Location</h5>
+                <p>British Columbia, Canada</p>
+              </div>
+            </div>
 
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 5v5l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h5>Response Time</h5>
+                <p>We respond to all inquiries within two (2) business days. Complaints are acknowledged within five (5) business days.</p>
+              </div>
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <div>
-            <h2>Send Us a Message</h2>
-            <p>
-              Complete the form below and we will respond within two business days.
-              For certification inquiries, please include details about your organization
-              and the standard(s) you are interested in.
-            </p>
-            <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST" style="margin-top: 1.5rem;">
-
-              <label for="contact-name">Full Name <span aria-hidden="true">*</span></label>
-              <input type="text" id="contact-name" name="name" required autocomplete="name">
-
-              <label for="contact-org">Organization</label>
-              <input type="text" id="contact-org" name="organization" autocomplete="organization">
-
-              <label for="contact-email">Email Address <span aria-hidden="true">*</span></label>
-              <input type="email" id="contact-email" name="email" required autocomplete="email">
-
-              <label for="contact-subject">Subject</label>
-              <select id="contact-subject" name="subject">
-                <option value="Certification Inquiry">Certification Inquiry</option>
-                <option value="Quote Request">Quote Request</option>
-                <option value="General Question">General Question</option>
-                <option value="Impartiality Concern">Impartiality Concern</option>
-                <option value="Other">Other</option>
-              </select>
-
-              <label for="contact-message">Message <span aria-hidden="true">*</span></label>
-              <textarea id="contact-message" name="message" required placeholder="Please describe your inquiry, including the standard(s) of interest and any relevant details about your organization."></textarea>
-
-              <button type="submit" class="btn btn--blue">Send Message</button>
-
-              <p style="margin-top: 1rem; font-size: 0.85rem; color: #6c7a89;">
-                Alternatively, you may email us directly at
-                <a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a>.
-              </p>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Response Times -->
-    <section class="content-section content-section--alt">
-      <div class="container">
-        <h2>Response Times</h2>
-        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-          <div class="card">
-            <h3>General Inquiries</h3>
-            <p>We aim to respond to general inquiries within <strong>two (2) business days</strong>.</p>
-          </div>
-          <div class="card">
-            <h3>Certification Quotes</h3>
-            <p>Quotations are typically prepared within <strong>five (5) business days</strong> of receiving sufficient information.</p>
-          </div>
-          <div class="card">
-            <h3>Complaints</h3>
-            <p>Complaints are acknowledged within <strong>five (5) business days</strong>. See our <a href="complaints.html">Complaints &amp; Appeals</a> page.</p>
+          <div style="margin-top:var(--space-2xl);">
+            <h4 style="font-family:var(--font-sans);font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-md);">Specialized Contacts</h4>
+            <p style="font-size:var(--text-sm);">For impartiality concerns, please contact <a href="mailto:impartiality@aictglobalservices.com">impartiality@aictglobalservices.com</a>.</p>
+            <p style="font-size:var(--text-sm);">For privacy-related inquiries, please see our <a href="privacy.html">Privacy Policy</a>.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="logo.png" alt="AICT Global Services Inc.">
-          <p>
-            AICT Global Services Inc. is a certification body providing management system
-            certification audits for information security, AI management, and AI governance standards.
-          </p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Policies</h4>
-          <ul class="footer-links">
-            <li><a href="impartiality.html">Impartiality Statement</a></li>
-            <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
-            <li><a href="verify.html">Verify a Certificate</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p>162 Furry Creek Drive<br>Furry Creek, BC V8B 1A3<br>Canada</p>
-          <p><a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 AICT Global Services Inc. All rights reserved.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    (function () {
-      var toggle = document.querySelector('.nav-toggle');
-      var nav = document.querySelector('.main-nav');
-      if (toggle && nav) {
-        toggle.addEventListener('click', function () {
-          var expanded = nav.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', expanded);
-        });
-      }
-    })();
-  </script>
+</main>
 
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="AICT Global Services">
+        <p>AICT Global Services Inc. is an independent Canadian certification body providing management system certification services conforming to ISO/IEC 17021-1:2015.</p>
+        <div class="footer-conformity">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1.5L2 4.5v4c0 4.2 2.6 8.1 6 9 3.4-.9 6-4.8 6-9v-4L8 1.5z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M5.5 8l2 2 3-3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Conforming to ISO/IEC 17021-1:2015</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="services.html">Certification Services</a></li>
+          <li><a href="about.html">About AICT</a></li>
+          <li><a href="verify.html">Verify a Certificate</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Policies &amp; Compliance</h5>
+        <ul>
+          <li><a href="impartiality.html">Impartiality Policy</a></li>
+          <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a></li>
+          <li><a href="mailto:complaints@aictglobalservices.com">complaints@aictglobalservices.com</a></li>
+          <li>British Columbia, Canada</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AICT Global Services Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="impartiality.html">Impartiality</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

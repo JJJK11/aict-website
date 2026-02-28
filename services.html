@@ -3,356 +3,449 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certification Services — AICT Global Services Inc.</title>
-  <meta name="description" content="AICT Global Services provides certification audits for ISO/IEC 27001, ISO/IEC 42001, CAN/CIOSC 101, and CAN/CIOSC 104 standards.">
-  <link rel="stylesheet" href="style.css">
+  <title>Certification Services — AICT Global Services</title>
+  <meta name="description" content="AICT Global Services offers certification against ISO/IEC 27001, ISO/IEC 42001, CAN/CIOSC 101, and CAN/CIOSC 104. Learn about our audit process, methodology, and fee structure.">
+  <meta property="og:title" content="Certification Services — AICT Global Services">
+  <meta property="og:description" content="Management system certification for information security, AI governance, and digital trust standards.">
+  <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <a href="#main" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
-  <!-- Header -->
-  <header class="site-header">
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="header-logo" aria-label="AICT Global Services home">
+      <img src="logo.png" alt="AICT Global Services" width="180" height="48">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="verify.html">Verify</a>
+      <a href="impartiality.html">Impartiality</a>
+      <a href="contact.html">Contact</a>
+      <div class="header-cta">
+        <a href="contact.html" class="btn btn--accent btn--sm">Get Started</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
     <div class="container">
-      <a href="index.html" class="site-logo" aria-label="AICT Global Services — Home">
-        <img src="logo.png" alt="AICT Global Services Inc. logo">
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <ul class="main-nav" role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="impartiality.html">Impartiality</a></li>
-          <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
-          <li><a href="verify.html">Verify Certificate</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator" aria-hidden="true"></span>
+        <span aria-current="page">Services</span>
       </nav>
+      <h1 class="reveal">Certification Services</h1>
+      <p class="reveal reveal-delay-1">AICT Global Services provides management system certification against internationally recognized and Canadian national standards. Our audits are conducted in full conformity with ISO/IEC 17021-1:2015.</p>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <h1>Certification Services</h1>
-        <p class="lead">Independent, accredited management system certification audits in information security, AI management, and AI governance.</p>
-      </div>
-    </section>
-
-    <!-- Service: ISO 27001 -->
-    <section class="content-section">
-      <div class="container">
-        <span class="standard-tag" style="display:inline-block; background:linear-gradient(135deg,#1e5fa8,#2980b9); color:#fff; font-size:0.85rem; font-weight:600; padding:0.3rem 0.85rem; border-radius:20px; margin-bottom:1rem;">ISO/IEC 27001</span>
-        <h2>Information Security Management Systems</h2>
-        <p>
-          ISO/IEC 27001 is the internationally recognized standard for establishing, implementing,
-          maintaining, and continually improving an information security management system (ISMS).
-          Certification to ISO/IEC 27001 demonstrates to customers, regulators, and stakeholders
-          that your organization takes a systematic approach to managing sensitive information.
-        </p>
-        <h3>Who Should Seek Certification?</h3>
-        <ul>
-          <li>Organizations that process, store, or transmit sensitive or regulated data</li>
-          <li>Technology companies and service providers handling client information</li>
-          <li>Organizations subject to contractual or regulatory information security requirements</li>
-          <li>Government suppliers and contractors requiring security certifications</li>
-        </ul>
-        <h3>Key Benefits</h3>
-        <ul>
-          <li>Demonstrate a structured approach to information security risk management</li>
-          <li>Meet regulatory and contractual security requirements</li>
-          <li>Build trust with clients, partners, and stakeholders</li>
-          <li>Reduce the likelihood and impact of security incidents</li>
-          <li>Gain competitive advantage in markets where security assurance is valued</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Service: ISO 42001 -->
-    <section class="content-section content-section--alt">
-      <div class="container">
-        <span class="standard-tag" style="display:inline-block; background:linear-gradient(135deg,#1e5fa8,#2980b9); color:#fff; font-size:0.85rem; font-weight:600; padding:0.3rem 0.85rem; border-radius:20px; margin-bottom:1rem;">ISO/IEC 42001</span>
-        <h2>Artificial Intelligence Management Systems</h2>
-        <p>
-          ISO/IEC 42001 specifies requirements for establishing, implementing, maintaining, and
-          continually improving an AI management system (AIMS) within organizations that provide
-          or use AI-based products or services. It is the first international management system
-          standard dedicated to artificial intelligence.
-        </p>
-        <h3>Who Should Seek Certification?</h3>
-        <ul>
-          <li>Organizations developing, deploying, or operating AI-based systems</li>
-          <li>Technology companies offering AI products or services</li>
-          <li>Organizations using AI to make or support decisions affecting individuals</li>
-          <li>Companies seeking to demonstrate responsible AI practices to regulators</li>
-        </ul>
-        <h3>Key Benefits</h3>
-        <ul>
-          <li>Establish governance over AI systems throughout their lifecycle</li>
-          <li>Demonstrate responsible and trustworthy AI practices</li>
-          <li>Address regulatory expectations for AI accountability and transparency</li>
-          <li>Manage risks associated with AI development and deployment</li>
-          <li>Build stakeholder confidence in AI-driven products and services</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Service: CAN/CIOSC 101 -->
-    <section class="content-section">
-      <div class="container">
-        <span class="standard-tag" style="display:inline-block; background:linear-gradient(135deg,#1e5fa8,#2980b9); color:#fff; font-size:0.85rem; font-weight:600; padding:0.3rem 0.85rem; border-radius:20px; margin-bottom:1rem;">CAN/CIOSC 101</span>
-        <h2>Ethical Design and Use of Automated Decision Systems</h2>
-        <p>
-          CAN/CIOSC 101 is a Canadian national standard addressing the ethical design, development,
-          and deployment of automated decision systems (ADS). It provides a framework for
-          algorithmic accountability, fairness assessment, and transparency in automated
-          decision-making processes.
-        </p>
-        <h3>Who Should Seek Certification?</h3>
-        <ul>
-          <li>Public sector organizations using automated systems for decisions affecting individuals</li>
-          <li>Private sector companies deploying algorithmic decision-making tools</li>
-          <li>Organizations subject to Canada's Directive on Automated Decision-Making</li>
-          <li>Entities seeking to demonstrate ethical AI governance to Canadian regulators</li>
-        </ul>
-        <h3>Key Benefits</h3>
-        <ul>
-          <li>Demonstrate compliance with Canadian standards for automated decision-making</li>
-          <li>Ensure fairness, transparency, and accountability in algorithmic systems</li>
-          <li>Mitigate legal and reputational risks associated with biased or opaque decisions</li>
-          <li>Build public trust in automated processes</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Service: CAN/CIOSC 104 -->
-    <section class="content-section content-section--alt">
-      <div class="container">
-        <span class="standard-tag" style="display:inline-block; background:linear-gradient(135deg,#1e5fa8,#2980b9); color:#fff; font-size:0.85rem; font-weight:600; padding:0.3rem 0.85rem; border-radius:20px; margin-bottom:1rem;">CAN/CIOSC 104</span>
-        <h2>AI Data Governance</h2>
-        <p>
-          CAN/CIOSC 104 establishes requirements for the governance of data used in artificial
-          intelligence systems. It addresses the full data lifecycle — from collection and
-          preparation through to usage, storage, and disposal — with a focus on data quality,
-          provenance, bias mitigation, and responsible management.
-        </p>
-        <h3>Who Should Seek Certification?</h3>
-        <ul>
-          <li>Organizations managing data pipelines that feed AI and machine learning systems</li>
-          <li>Data-intensive organizations seeking governance frameworks for AI data</li>
-          <li>Companies aiming to demonstrate robust data practices to regulators and clients</li>
-          <li>AI system developers needing to ensure data quality and traceability</li>
-        </ul>
-        <h3>Key Benefits</h3>
-        <ul>
-          <li>Establish structured governance over AI training and operational data</li>
-          <li>Mitigate bias and quality issues arising from poorly governed data</li>
-          <li>Demonstrate data provenance and traceability for regulatory compliance</li>
-          <li>Enhance stakeholder confidence in AI outputs through sound data practices</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Certification Process -->
-    <section class="content-section">
-      <div class="container">
-        <div class="text-center">
-          <h2>The Certification Process</h2>
-          <p class="lead">Our certification process follows the requirements of ISO/IEC 17021-1 and consists of the following stages.</p>
-        </div>
-
-        <div class="process-steps">
-
-          <div class="process-step">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h3>Application and Review</h3>
-              <p>
-                Submit a certification application providing details about your organization, scope of
-                the management system, and the standard(s) you wish to be certified against. AICT
-                reviews the application to confirm we have the competence and capacity to perform
-                the audit, and that no conflicts of interest exist.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h3>Stage 1 Audit</h3>
-              <p>
-                The Stage 1 audit evaluates your organization's readiness for the Stage 2 audit.
-                This includes a review of management system documentation, understanding of your
-                organization's context and processes, evaluation of internal audit and management
-                review results, and confirmation of scope and audit planning.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h3>Stage 2 Audit</h3>
-              <p>
-                The Stage 2 audit is a comprehensive, on-site (or remote, where applicable)
-                assessment of the implementation and effectiveness of your management system.
-                Auditors evaluate conformity with all requirements of the applicable standard,
-                gather objective evidence, and identify any nonconformities.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">4</div>
-            <div class="step-content">
-              <h3>Certification Decision</h3>
-              <p>
-                Following the Stage 2 audit and resolution of any nonconformities, an independent
-                certification decision is made by a competent person or committee not involved in
-                the audit. If the decision is positive, a certificate of conformity is issued for
-                a three-year certification cycle.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">5</div>
-            <div class="step-content">
-              <h3>Surveillance Audits</h3>
-              <p>
-                Surveillance audits are conducted at planned intervals (at least annually) throughout
-                the three-year certification cycle. These audits confirm the continued conformity
-                and effectiveness of the management system and address any changes since the
-                previous audit.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">6</div>
-            <div class="step-content">
-              <h3>Recertification</h3>
-              <p>
-                Prior to the expiry of the three-year certification cycle, a recertification audit
-                is conducted to evaluate the continued conformity and effectiveness of the
-                management system as a whole. Upon a positive decision, a new three-year
-                certification cycle begins.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- What to Expect -->
-    <section class="content-section content-section--alt">
-      <div class="container">
-        <h2>What Clients Can Expect</h2>
-        <p>
-          AICT Global Services is committed to delivering a professional, transparent, and
-          constructive certification experience. Throughout the process, you can expect:
-        </p>
-        <ul>
-          <li><strong>Clear communication</strong> — Timely and transparent information about timelines, requirements, audit plans, and findings.</li>
-          <li><strong>Competent audit teams</strong> — Auditors with relevant technical expertise and sector knowledge assigned to your audit.</li>
-          <li><strong>Impartial assessment</strong> — Independent evaluation free from conflicts of interest, in accordance with ISO/IEC 17021-1.</li>
-          <li><strong>Constructive findings</strong> — Audit reports that provide clear, evidence-based findings to support your continual improvement.</li>
-          <li><strong>Confidentiality</strong> — All information obtained during the certification process is treated as confidential and protected accordingly.</li>
-          <li><strong>Responsive service</strong> — A dedicated point of contact and timely responses to questions and requests.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Fees -->
-    <section class="content-section">
-      <div class="container">
-        <h2>Fee Information</h2>
-        <p>
-          Certification fees are determined based on factors including the size of the organization,
-          the complexity of the management system, the number of sites, and the scope of
-          certification sought. Fees are communicated transparently prior to the commencement of
-          any audit activities.
-        </p>
-        <p>
-          To receive a quotation tailored to your organization, please contact us with details about
-          your certification requirements.
-        </p>
-        <div style="margin-top: 1.5rem;">
-          <a href="contact.html" class="btn btn--blue">Request a Quote</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-banner">
-      <div class="container">
-        <h2>Start Your Certification Journey</h2>
-        <p>Contact us to discuss your certification needs and receive a no-obligation proposal.</p>
-        <a href="contact.html" class="btn btn--primary">Contact AICT</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- OVERVIEW -->
+  <section class="content-section">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="logo.png" alt="AICT Global Services Inc.">
-          <p>
-            AICT Global Services Inc. is a certification body providing management system
-            certification audits for information security, AI management, and AI governance standards.
-          </p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Policies</h4>
-          <ul class="footer-links">
-            <li><a href="impartiality.html">Impartiality Statement</a></li>
-            <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
-            <li><a href="verify.html">Verify a Certificate</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p>162 Furry Creek Drive<br>Furry Creek, BC V8B 1A3<br>Canada</p>
-          <p><a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 AICT Global Services Inc. All rights reserved.</p>
+      <div class="content-block reveal">
+        <p>As an independent certification body, AICT evaluates whether an organization's management system conforms to the requirements of a chosen standard. We do not provide consulting services. Our role is strictly limited to impartial, evidence-based conformity assessment.</p>
+        <p>We currently offer certification against four standards, spanning information security, artificial intelligence management, ethical automated decision-making, and AI data governance. Each certification follows a rigorous, multi-stage audit process designed to provide confidence to your stakeholders, regulators, and customers.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    (function () {
-      var toggle = document.querySelector('.nav-toggle');
-      var nav = document.querySelector('.main-nav');
-      if (toggle && nav) {
-        toggle.addEventListener('click', function () {
-          var expanded = nav.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', expanded);
-        });
-      }
-    })();
-  </script>
+  <!-- ISO 27001 -->
+  <section class="content-section content-section--bg" id="iso27001" aria-labelledby="iso27001-heading">
+    <div class="container">
+      <div class="content-block">
+        <div class="service-detail reveal">
+          <span class="mono-label">ISO/IEC 27001:2022</span>
+          <h2 id="iso27001-heading">Information Security Management Systems</h2>
+          <p>ISO/IEC 27001 is the world's most recognized standard for information security management. It provides a systematic framework for managing sensitive company information, ensuring it remains secure through a combination of people, processes, and technology controls.</p>
 
+          <h3>Who Needs This Certification?</h3>
+          <p>Any organization that handles sensitive or confidential information benefits from ISO 27001 certification. This includes technology companies, financial services firms, healthcare organizations, government contractors, cloud service providers, and any business processing personal data or operating in regulated sectors.</p>
+
+          <h3>What the Standard Covers</h3>
+          <ul>
+            <li>Context of the organization and interested party requirements</li>
+            <li>Leadership commitment and information security policy</li>
+            <li>Risk assessment and risk treatment processes</li>
+            <li>Operational security controls (Annex A controls)</li>
+            <li>Performance evaluation and internal audit</li>
+            <li>Continual improvement and management review</li>
+          </ul>
+
+          <h3>Benefits of Certification</h3>
+          <div class="service-benefits">
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Demonstrates due diligence in protecting information assets to clients, partners, and regulators</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Reduces risk of data breaches and associated legal, financial, and reputational costs</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Facilitates compliance with PIPEDA, GDPR, and sector-specific regulatory requirements</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Often a prerequisite for government tenders, enterprise contracts, and supply chain requirements</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ISO 42001 -->
+  <section class="content-section" id="iso42001" aria-labelledby="iso42001-heading">
+    <div class="container">
+      <div class="content-block">
+        <div class="service-detail reveal">
+          <span class="mono-label">ISO/IEC 42001:2023</span>
+          <h2 id="iso42001-heading">Artificial Intelligence Management Systems</h2>
+          <p>ISO/IEC 42001 is the first international standard dedicated to AI management systems. Published in 2023, it provides organizations with a structured framework for the responsible development, provision, and use of AI systems, addressing the unique risks and opportunities that artificial intelligence presents.</p>
+
+          <h3>Why ISO 42001 Matters</h3>
+          <p>As AI becomes embedded in business operations, the risks associated with bias, transparency, safety, and accountability grow. ISO 42001 provides an internationally agreed-upon framework for managing these risks systematically. With the EU AI Act and Canada's proposed AIDA legislation, proactive AI governance is no longer optional for forward-thinking organizations.</p>
+
+          <h3>Who Needs This Certification?</h3>
+          <ul>
+            <li>Organizations developing or deploying AI and machine learning systems</li>
+            <li>Technology companies offering AI-powered products or services</li>
+            <li>Enterprises using AI for automated decision-making</li>
+            <li>Government departments and agencies deploying AI tools</li>
+            <li>Organizations seeking to demonstrate responsible AI practices to regulators and the public</li>
+          </ul>
+
+          <h3>Benefits of Certification</h3>
+          <div class="service-benefits">
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Demonstrates responsible AI governance to regulators, investors, and customers</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Proactively addresses emerging regulatory requirements (EU AI Act, Canada AIDA)</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Provides a systematic approach to managing AI-specific risks including bias, safety, and transparency</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Competitive advantage as one of the first certified organizations in your sector</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAN/CIOSC 101 -->
+  <section class="content-section content-section--bg" id="canciosc101" aria-labelledby="ciosc101-heading">
+    <div class="container">
+      <div class="content-block">
+        <div class="service-detail reveal">
+          <span class="mono-label">CAN/CIOSC 101:2019</span>
+          <h2 id="ciosc101-heading">Ethical Design and Use of Automated Decision Systems</h2>
+          <p>CAN/CIOSC 101 is a Canadian national standard that provides a framework for the ethical design, development, and deployment of automated decision systems. It is particularly relevant to organizations whose automated systems affect the rights, entitlements, or interests of individuals.</p>
+
+          <h3>Who Needs This Certification?</h3>
+          <ul>
+            <li>Government departments deploying automated decision tools (aligned with Treasury Board Directive on Automated Decision-Making)</li>
+            <li>Financial institutions using algorithmic credit scoring or risk assessment</li>
+            <li>Healthcare organizations using AI-assisted diagnostic or triage systems</li>
+            <li>Any organization whose automated systems produce decisions with significant impact on individuals</li>
+          </ul>
+
+          <h3>What the Standard Addresses</h3>
+          <p>CAN/CIOSC 101 covers the full lifecycle of automated decision systems, from design through deployment and monitoring. It requires organizations to assess the impact level of their automated decisions, ensure appropriate human oversight, provide explanations of decisions to affected individuals, and establish processes for challenge and redress.</p>
+
+          <h3>Benefits of Certification</h3>
+          <div class="service-benefits">
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Alignment with Canadian federal government expectations for automated decision systems</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Demonstrates accountability and transparency in how automated decisions affect people</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Mitigates legal and reputational risk from biased or opaque automated decisions</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Provides a structured approach to ethical AI that builds public trust</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAN/CIOSC 104 -->
+  <section class="content-section" id="canciosc104" aria-labelledby="ciosc104-heading">
+    <div class="container">
+      <div class="content-block">
+        <div class="service-detail reveal">
+          <span class="mono-label">CAN/CIOSC 104:2024</span>
+          <h2 id="ciosc104-heading">Responsible Governance of Data Used in Artificial Intelligence</h2>
+          <p>CAN/CIOSC 104 addresses one of the most critical aspects of AI systems: the data that powers them. This Canadian national standard provides requirements and guidance for the responsible governance of data throughout its lifecycle when used in AI systems, from collection and preparation through use, retention, and disposal.</p>
+
+          <h3>Who Needs This Certification?</h3>
+          <ul>
+            <li>Organizations training AI models on proprietary or public datasets</li>
+            <li>Data providers and aggregators supplying data for AI systems</li>
+            <li>Enterprises managing large-scale data pipelines for machine learning</li>
+            <li>Any organization seeking to ensure the quality, integrity, and ethical governance of AI training data</li>
+          </ul>
+
+          <h3>What the Standard Covers</h3>
+          <p>CAN/CIOSC 104 establishes requirements for data provenance and lineage tracking, data quality assessment and improvement, bias identification and mitigation in datasets, consent and privacy in data collection, data security and access controls, and documentation and transparency throughout the data lifecycle.</p>
+
+          <h3>Benefits of Certification</h3>
+          <div class="service-benefits">
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Ensures the integrity and quality of data feeding AI systems, reducing downstream risk</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Demonstrates compliance with evolving data governance regulations and expectations</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Pairs naturally with ISO 42001 certification for comprehensive AI governance</p>
+            </div>
+            <div class="service-benefit">
+              <div class="service-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p>Addresses a critical gap in AI governance that most organizations have not yet formalized</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILED CERTIFICATION PROCESS -->
+  <section class="section section--bg" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Process</span>
+        <h2 id="process-heading">Certification Process in Detail</h2>
+        <p>Our certification process follows ISO/IEC 17021-1 requirements at every stage, ensuring consistency, objectivity, and defensibility.</p>
+      </div>
+
+      <div class="content-block">
+        <ol class="content-steps reveal">
+          <li>
+            <strong>Application and Inquiry</strong><br>
+            You submit an application providing information about your organization, the scope of your management system, the standard you wish to be certified against, the number of employees, and the nature of your operations. We use this to assess whether we can accept the engagement and to estimate audit time.
+          </li>
+          <li>
+            <strong>Application Review and Contract</strong><br>
+            AICT reviews your application to ensure we have the competence to audit your specific scope and that no conflicts of interest exist. We then issue a formal certification agreement that outlines the scope, timeline, audit team composition, and fee structure.
+          </li>
+          <li>
+            <strong>Stage 1 Audit (Documentation Review)</strong><br>
+            The Stage 1 audit evaluates your management system documentation for conformity with the standard's requirements. We assess your readiness for the Stage 2 audit, identify any areas of concern, and confirm the scope and logistics. This may be conducted remotely or on-site.
+          </li>
+          <li>
+            <strong>Stage 2 Audit (Implementation Audit)</strong><br>
+            The Stage 2 audit is a thorough, evidence-based assessment of your management system's implementation and effectiveness. Our auditors evaluate conformity through interviews, observation, document review, and sampling. Nonconformities are documented with clear, evidence-based findings.
+          </li>
+          <li>
+            <strong>Certification Decision</strong><br>
+            Following the Stage 2 audit, an independent certification decision-maker reviews all audit evidence and findings. This person was not involved in the audit itself, ensuring an impartial certification decision. Certification is granted only when all requirements are demonstrably met.
+          </li>
+          <li>
+            <strong>Certificate Issuance</strong><br>
+            Upon a positive decision, AICT issues a certificate specifying the standard, scope, effective date, and expiration date. The certificate is valid for three years, subject to successful annual surveillance audits.
+          </li>
+          <li>
+            <strong>Surveillance Audits</strong><br>
+            Annual surveillance audits verify ongoing conformity. These are less extensive than the initial certification audit but cover key areas and any previously identified concerns. The first surveillance must occur within 12 months of the initial certification decision.
+          </li>
+          <li>
+            <strong>Recertification</strong><br>
+            Before the three-year certification cycle expires, a recertification audit evaluates the continued effectiveness of the entire management system. Successful recertification begins a new three-year cycle.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT METHODOLOGY -->
+  <section class="content-section" id="methodology" aria-labelledby="methodology-heading">
+    <div class="container">
+      <div class="content-block reveal">
+        <span class="section-label">Audit Methodology</span>
+        <h2 id="methodology-heading">How We Conduct Audits</h2>
+        <p>AICT conducts audits using methods appropriate to your organization and management system. We offer flexible delivery while maintaining the rigor and thoroughness that certification demands.</p>
+
+        <h3>On-Site Audits</h3>
+        <p>Traditional on-site audits involve our audit team visiting your facilities to conduct interviews, observe operations, and review documentation in person. On-site audits are required where physical processes, infrastructure, or environmental factors are integral to your management system's scope.</p>
+
+        <h3>Remote Audits</h3>
+        <p>Where appropriate and in accordance with IAF MD 4 requirements, we conduct audits remotely using secure communication technologies. Remote auditing is effective for organizations with digital operations, cloud-based systems, and distributed workforces. We ensure that remote methods maintain the same evidentiary rigor as on-site audits.</p>
+
+        <h3>Hybrid Audits</h3>
+        <p>Many audits combine on-site and remote methods. For example, document reviews and management interviews may be conducted remotely, while operational observations occur on-site. We tailor the approach to your specific context.</p>
+
+        <div class="info-box">
+          <p><strong>Audit Team Competence:</strong> Every audit is conducted by qualified auditors with demonstrated competence in the applicable standard and relevant technical expertise in your organization's sector. Audit team composition is determined during the application review stage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEES -->
+  <section class="content-section content-section--bg" id="fees" aria-labelledby="fees-heading">
+    <div class="container">
+      <div class="content-block reveal">
+        <span class="section-label">Transparent Pricing</span>
+        <h2 id="fees-heading">Fee Structure</h2>
+        <p>AICT is committed to transparency in pricing. Our fees are determined based on several factors specific to your organization and are communicated clearly before any engagement begins.</p>
+
+        <h3>Factors That Determine Certification Fees</h3>
+        <ul>
+          <li>Number of employees within the management system scope</li>
+          <li>Number and complexity of sites or locations</li>
+          <li>The standard(s) being certified against</li>
+          <li>Complexity of the organization's processes and operations</li>
+          <li>Whether audits are conducted on-site, remotely, or in a hybrid model</li>
+          <li>Any specialized technical competence required for the audit team</li>
+        </ul>
+
+        <h3>What Fees Cover</h3>
+        <ul>
+          <li>Application review and contract preparation</li>
+          <li>Stage 1 and Stage 2 audit planning and execution</li>
+          <li>Audit reporting and nonconformity documentation</li>
+          <li>Certification decision review</li>
+          <li>Certificate issuance and public registry listing</li>
+          <li>Annual surveillance audits (quoted separately)</li>
+        </ul>
+
+        <div class="info-box info-box--green">
+          <p><strong>Request a Quote:</strong> Contact us with information about your organization and certification objectives, and we will provide a detailed, no-obligation fee proposal. There are no hidden fees. <a href="contact.html">Contact us to request a quote.</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="reveal">Start Your Certification Journey</h2>
+      <p class="reveal reveal-delay-1">Contact us to discuss your certification needs. We will help you understand the process, estimate timelines, and receive a transparent fee proposal.</p>
+      <div class="reveal reveal-delay-2">
+        <a href="contact.html" class="btn btn--accent btn--lg">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="AICT Global Services">
+        <p>AICT Global Services Inc. is an independent Canadian certification body providing management system certification services conforming to ISO/IEC 17021-1:2015.</p>
+        <div class="footer-conformity">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1.5L2 4.5v4c0 4.2 2.6 8.1 6 9 3.4-.9 6-4.8 6-9v-4L8 1.5z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M5.5 8l2 2 3-3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Conforming to ISO/IEC 17021-1:2015</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="services.html">Certification Services</a></li>
+          <li><a href="about.html">About AICT</a></li>
+          <li><a href="verify.html">Verify a Certificate</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Policies &amp; Compliance</h5>
+        <ul>
+          <li><a href="impartiality.html">Impartiality Policy</a></li>
+          <li><a href="complaints.html">Complaints &amp; Appeals</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@aictglobalservices.com">info@aictglobalservices.com</a></li>
+          <li><a href="mailto:complaints@aictglobalservices.com">complaints@aictglobalservices.com</a></li>
+          <li>British Columbia, Canada</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AICT Global Services Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="impartiality.html">Impartiality</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2463"/>
+      <stop offset="100%" stop-color="#1e5fa8"/>
+    </linearGradient>
+    <linearGradient id="check" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- A letterform -->
+  <path d="M19 50 L29 18 C29.8 15.5 31 14 32 14 C33 14 34.2 15.5 35 18 L45 50 L40 50 L37.5 42 L26.5 42 L24 50 Z M28 37 L36 37 L32 24 Z" fill="white"/>
+
+  <!-- Checkmark accent (overlapping top of A) -->
+  <path d="M26 20 L30 24.5 L39 14" stroke="url(#check)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

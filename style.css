@@ -906,12 +906,11 @@ small {
 }
 
 .footer-brand img {
-  height: 44px;
+  height: 48px;
   width: auto;
-  opacity: 0.95;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.92);
   border-radius: 6px;
-  padding: 4px 8px;
+  padding: 6px 12px;
 }
 
 .footer-conformity {

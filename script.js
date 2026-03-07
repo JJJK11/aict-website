@@ -146,8 +146,10 @@ function pickIq(btn, val) {
   btn.parentElement.querySelectorAll('.iq-opt').forEach(function(b) { b.classList.remove('on'); });
   btn.classList.add('on');
   iqIntent = val;
+  document.getElementById('iqIntentField').value = val;
   if (val === 'Inspection') {
     iqPrograms = ['CPCSC'];
+    document.getElementById('iqProgramsField').value = 'CPCSC';
     setTimeout(function() { nextIq(2); }, 250);
   } else {
     setTimeout(function() { nextIq(1); }, 250);
@@ -159,6 +161,7 @@ function togIqM(btn) {
   iqPrograms = [];
   btn.parentElement.querySelectorAll('.iq-opt.on').forEach(function(b) { iqPrograms.push(b.dataset.v); });
   document.getElementById('iqNext1').style.display = iqPrograms.length ? 'inline-flex' : 'none';
+  document.getElementById('iqProgramsField').value = iqPrograms.join(', ');
 }
 
 function nextIq(step) {

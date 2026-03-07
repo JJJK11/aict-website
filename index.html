@@ -446,7 +446,13 @@
 <section class="ct" id="contact"><div class="c"><div class="ct-in">
   <div><div class="ct-h">Start a conversation</div><p class="ct-p">Whether exploring certification for the first time or looking for a technology-focused alternative, we will help you understand scope, timeline, and requirements.</p>
     <div class="ct-det"><div class="ct-row"><div class="ct-ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span class="ct-rt">info@aictglobalservices.com</span></div><div class="ct-row"><div class="ct-ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span class="ct-rt">Vancouver, British Columbia, Canada</span></div><div class="ct-row"><div class="ct-ri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><span class="ct-rt">aictglobalservices.com</span></div></div></div>
-  <form class="cf" id="contactForm" onsubmit="event.preventDefault();this.querySelector('.cf-sub').textContent='Inquiry Submitted';this.querySelector('.cf-sub').disabled=true">
+  <form class="cf" id="contactForm" action="https://formsubmit.co/info@aictglobalservices.com" method="POST">
+    <input type="hidden" name="_subject" value="New Inquiry — AICT Website">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://aictglobalservices.com/#contact">
+    <input type="hidden" name="intent" id="iqIntentField" value="">
+    <input type="hidden" name="programs" id="iqProgramsField" value="">
+    <input type="text" name="_honey" style="display:none">
     <!-- Step indicators -->
     <div style="display:flex;gap:4px;margin-bottom:4px">
       <div class="iq-dot act" id="iqd0"></div><div class="iq-dot" id="iqd1"></div><div class="iq-dot" id="iqd2"></div>
@@ -477,9 +483,9 @@
     <!-- Step 2: Contact details -->
     <div class="iq-step" id="iqs2" style="display:none">
       <div class="iq-label">Your details</div>
-      <div class="cfr"><div class="cff"><label>Name</label><input type="text" placeholder="Full name" required></div><div class="cff"><label>Organization</label><input type="text" placeholder="Organization name"></div></div>
-      <div class="cfr" style="margin-top:12px"><div class="cff"><label>Email</label><input type="email" placeholder="Work email" required></div><div class="cff"><label>Role</label><input type="text" placeholder="Title"></div></div>
-      <div class="cff" style="margin-top:12px"><label>Anything else?</label><textarea id="msgF" placeholder="Timeline, questions, context..."></textarea></div>
+      <div class="cfr"><div class="cff"><label>Name</label><input type="text" name="name" placeholder="Full name" required></div><div class="cff"><label>Organization</label><input type="text" name="organization" placeholder="Organization name"></div></div>
+      <div class="cfr" style="margin-top:12px"><div class="cff"><label>Email</label><input type="email" name="email" placeholder="Work email" required></div><div class="cff"><label>Role</label><input type="text" name="role" placeholder="Title"></div></div>
+      <div class="cff" style="margin-top:12px"><label>Anything else?</label><textarea id="msgF" name="message" placeholder="Timeline, questions, context..."></textarea></div>
       <button type="submit" class="cf-sub">Submit Inquiry</button>
     </div>
     <div class="cf-disc">Submitting an inquiry does not constitute an application, certification, or conformity assessment decision.</div></form>

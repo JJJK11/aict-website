@@ -661,7 +661,7 @@ var KB = [
   // Complaints and appeals
   {
     k: ['complaint', 'appeal', 'file a complaint', 'dispute', 'disagree'],
-    a: 'Any person or organization may file a complaint about AICT or a certified client. Complaints are acknowledged within 5 business days, investigated independently, and resolved within 30 business days. Appeals of certification decisions must be filed within 30 calendar days and are reviewed by individuals not involved in the original decision. Escalation to SCC is available.',
+    a: 'Any person or organization may file a complaint about AICT or a certified client. Submit complaints to <a href="mailto:complaints@aictglobalservices.com" style="color:var(--teal)">complaints@aictglobalservices.com</a> or appeals to <a href="mailto:appeals@aictglobalservices.com" style="color:var(--teal)">appeals@aictglobalservices.com</a>. Complaints are acknowledged within 5 business days, investigated independently, and resolved within 30 business days. Appeals of certification decisions must be filed within 30 calendar days and are reviewed by individuals not involved in the original decision. Escalation to SCC is available.',
     f: ['Governance details', 'Independence', 'Contact AICT']
   },
   // Integrated audits

@@ -11,18 +11,16 @@ var MAP_EDGES = {
   'pipeda': ['m-priv', 'c-27001'],
   'prov': ['m-priv', 'c-27001'],
   'aida': ['m-ai', 'm-aisys', 'c-42001'],
-  'defproc': ['m-def', 'c-cpcsc', 'c-27001'],
+  'defproc': ['c-27001'],
   'govproc': ['m-gov', 'c-cyber', 'c-27001'],
   'm-priv': ['pipeda', 'prov', 'c-27001'],
   'm-ai': ['aida', 'c-42001'],
-  'm-def': ['defproc', 'c-cpcsc', 'c-27001'],
   'm-gov': ['govproc', 'c-cyber', 'c-27001'],
   'm-cloud': ['c-27001'],
   'm-aisys': ['aida', 'c-42001'],
-  'c-27001': ['pipeda', 'prov', 'm-priv', 'defproc', 'm-def', 'govproc', 'm-gov', 'm-cloud'],
+  'c-27001': ['pipeda', 'prov', 'm-priv', 'defproc', 'govproc', 'm-gov', 'm-cloud'],
   'c-42001': ['aida', 'm-ai', 'm-aisys'],
-  'c-cyber': ['govproc', 'm-gov'],
-  'c-cpcsc': ['defproc', 'm-def']
+  'c-cyber': ['govproc', 'm-gov']
 };
 
 var allMapEls = document.querySelectorAll('.rm-i, .rm-l');
@@ -56,11 +54,10 @@ function mapClick(pid) {
 // === SCOPE FINDER ===
 
 var SD = {
-  // AICT accredited scope
+  // AICT scope of accreditation applied for
   '27001': { n: 'ISO/IEC 27001', t: 'Certification', cl: '#2563EB', tg: ['saas', 'ai', 'govt', 'def', 'sme', 'pii', 'msp', 'health', 'fin', 'crit', 'edu', 'iot', 'mfg', 'telco', 'energy', 'cloud', 'auto'] },
   '42001': { n: 'ISO/IEC 42001', t: 'Certification', cl: '#7C3AED', tg: ['ai', 'edu'] },
   'cs':    { n: 'CyberSecure Canada', t: 'Certification', cl: '#059669', tg: ['govt', 'sme', 'ai', 'iot', 'mfg', 'telco', 'energy'] },
-  'cpcsc': { n: 'CPCSC', t: 'Inspection', cl: '#D97706', tg: ['def'] },
   // Certification extensions
   '27701': { n: 'ISO/IEC 27701', t: 'Certification', cl: '#2563EB', tg: ['saas', 'pii', 'health', 'fin', 'edu', 'telco', 'cloud'] },
   '27017': { n: 'ISO/IEC 27017', t: 'Extension', cl: '#2563EB', tg: ['saas', 'msp', 'telco', 'cloud'] },
@@ -147,13 +144,7 @@ function pickIq(btn, val) {
   btn.classList.add('on');
   iqIntent = val;
   document.getElementById('iqIntentField').value = val;
-  if (val === 'Inspection') {
-    iqPrograms = ['CPCSC'];
-    document.getElementById('iqProgramsField').value = 'CPCSC';
-    setTimeout(function() { nextIq(2); }, 250);
-  } else {
-    setTimeout(function() { nextIq(1); }, 250);
-  }
+  setTimeout(function() { nextIq(1); }, 250);
 }
 
 function togIqM(btn) {
@@ -271,18 +262,10 @@ var STEPS = {
     { t: 'Stage 2 -- Assessment', d: 'On-site or remote assessment of implementation effectiveness. Evidence-based evaluation against every applicable requirement. Findings documented and classified.', n: 'The core assessment. Auditors verify what is documented is implemented and effective.' },
     { t: 'Independent Certification Decision', d: 'Decision made by qualified personnel who did not conduct the audit. Structural separation between assessment and decision ensures objectivity.', n: 'This is non-negotiable. The decision-maker is always independent of the audit team.' },
     { t: 'Surveillance and Recertification', d: 'Annual surveillance maintains certification. Full recertification at three years. Continuous conformity, not a point-in-time check.', n: 'Surveillance covers a subset each year. Full scope covered across the cycle.' }
-  ],
-  insp: [
-    { t: 'Inquiry and Eligibility', d: 'Initial contact to determine inspection scope, applicable CPCSC requirements, and eligibility. We explain the inspection process and what evidence will be required.', n: 'Typical duration: 1-2 weeks. No commitment required at this stage.' },
-    { t: 'Application and Contract', d: 'Formal application with scope details. Contract defines inspection parameters, applicable scheme rules, and reporting obligations. Inspector assignment with competency and impartiality checks.', n: 'Inspection scope and contract finalized before any on-site activities.' },
-    { t: 'Inspection Planning', d: 'Inspection plan developed covering locations, processes, and evidence requirements. Sampling strategy defined per scheme rules. Client notified of schedule and preparation requirements.', n: 'Planning ensures efficient and thorough coverage of all applicable requirements.' },
-    { t: 'On-site Inspection', d: 'Physical verification of controls, processes, and security measures against CPCSC requirements. Evidence collected through observation, documentation review, and interviews with key personnel.', n: 'Inspections are evidence-based. Findings are documented and classified on-site.' },
-    { t: 'Inspection Report', d: 'Formal report detailing findings, non-conformities, and observations. Report issued to client with classification of each finding and required corrective actions where applicable.', n: 'Reports follow ISO/IEC 17020 requirements for content, accuracy, and traceability.' },
-    { t: 'Decision and Ongoing Monitoring', d: 'Independent review of inspection results. Decision on conformity status. Ongoing monitoring schedule established per scheme rules with periodic re-inspection.', n: 'Decision-maker is independent of the inspector. Re-inspection frequency set by scheme requirements.' }
   ]
 };
 
-var curStep = { cert: 0, insp: 0 };
+var curStep = { cert: 0 };
 var curLc = 'cert';
 
 function swLc(mode) {
@@ -292,7 +275,6 @@ function swLc(mode) {
     t.classList.toggle('act', t.dataset.lc === mode);
   });
   document.getElementById('lcCert').style.display = mode === 'cert' ? 'block' : 'none';
-  document.getElementById('lcInsp').style.display = mode === 'insp' ? 'block' : 'none';
 }
 
 function swGv(mode) {
@@ -300,27 +282,22 @@ function swGv(mode) {
     t.classList.toggle('act', t.dataset.gv === mode);
   });
   document.getElementById('gvCert').style.display = mode === 'cert' ? 'block' : 'none';
-  document.getElementById('gvInsp').style.display = mode === 'insp' ? 'block' : 'none';
 }
 
 function sS(i, mode) {
-  mode = mode || 'cert';
+  mode = 'cert';
   if (i === curStep[mode]) return;
   curStep[mode] = i;
-  var container = mode === 'cert' ? document.getElementById('stepper') : document.getElementById('stepperInsp');
+  var container = document.getElementById('stepper');
   container.querySelectorAll('.step').forEach(function(s, j) {
     s.classList.toggle('act', j === i);
   });
-  var tId = mode === 'cert' ? 'sdT' : 'sdTi';
-  var dId = mode === 'cert' ? 'sdD' : 'sdDi';
-  var nId = mode === 'cert' ? 'sdN' : 'sdNi';
-  var iId = mode === 'cert' ? 'sdI' : 'sdIi';
-  var inner = document.getElementById(iId);
+  var inner = document.getElementById('sdI');
   inner.classList.add('fading');
   setTimeout(function() {
-    document.getElementById(tId).textContent = STEPS[mode][i].t;
-    document.getElementById(dId).textContent = STEPS[mode][i].d;
-    document.getElementById(nId).textContent = STEPS[mode][i].n;
+    document.getElementById('sdT').textContent = STEPS[mode][i].t;
+    document.getElementById('sdD').textContent = STEPS[mode][i].d;
+    document.getElementById('sdN').textContent = STEPS[mode][i].n;
     inner.classList.remove('fading');
   }, 200);
 }
@@ -381,10 +358,9 @@ function buildAdvRec(s) {
 
   // Program logic based on industry + initiative
   if (ind.indexOf('defence') !== -1 || ind.indexOf('aerospace') !== -1) {
-    programs.push('CPCSC (inspection, required)');
     programs.push('ISO/IEC 27001 (certification)');
     programs.push('PBMM (Protected B environments)');
-    context = 'Defence supply chain organizations require CPCSC inspection under ISO/IEC 17020 and ISO 27001 certification for information security. PBMM applies for Protected B data.';
+    context = 'Defence supply chain organizations typically require ISO 27001 certification for information security. PBMM applies for Protected B data.';
   } else if (ind.indexOf('ai') !== -1 || init.indexOf('ai governance') !== -1) {
     programs.push('ISO/IEC 42001 (AI management, certification)');
     programs.push('ISO/IEC 27001 (information security foundation)');
@@ -520,14 +496,14 @@ var KB = [
   // CyberSecure Canada
   {
     k: ['cybersecure', 'cyber secure', 'cybersecure canada'],
-    a: 'CyberSecure Canada is a Government of Canada certification program for SMEs. Validates baseline cybersecurity across thirteen control areas including incident response, access control, patching, malware protection, and awareness. Certified by SCC-accredited bodies.',
+    a: 'CyberSecure Canada is a Government of Canada certification program for SMEs. Validates baseline cybersecurity across thirteen control areas including incident response, access control, patching, malware protection, and awareness. Certification is delivered through SCC accredited certification bodies.',
     f: ['CyberSecure vs 27001', '13 control areas', 'Timeline']
   },
-  // CPCSC / Defence Procurement
+  // Defence Procurement
   {
-    k: ['cpcsc', 'defence supply', 'defense supply', 'defence contract', 'defence procurement', 'defense procurement'],
-    a: 'The Canadian Program for Cyber Security Certification ensures defence supply chain organizations implement defined cybersecurity practices. AICT performs inspection under SCC IBAP accreditation per ISO/IEC 17020. Defence procurement maps to CPCSC + ISO/IEC 27001 + PBMM (for Protected B environments). Status: Required. CPCSC inspection is the regulated component.',
-    f: ['Inspection vs certification', 'PBMM', 'Defence requirements']
+    k: ['defence supply', 'defense supply', 'defence contract', 'defence procurement', 'defense procurement'],
+    a: 'Defence supply chain organizations map to ISO/IEC 27001 certification for information security, with PBMM for Protected B environments. AICT offers ISO/IEC 27001 certification. Defence specific cybersecurity programs are outside the scope AICT has applied for.',
+    f: ['ISO 27001', 'PBMM', 'Start an inquiry']
   },
   // PIPEDA
   {
@@ -550,8 +526,8 @@ var KB = [
   // Certification process
   {
     k: ['certification process', 'how does cert', 'how certification', 'steps', 'stage 1', 'stage 2'],
-    a: 'Certification lifecycle under ISO/IEC 17021-1: (1) Inquiry and eligibility, (2) Application and scope confirmation, (3) Stage 1 readiness review, (4) Stage 2 assessment of implementation, (5) Independent certification decision by personnel who did not audit, (6) Annual surveillance and three-year recertification. For inspection-based programs like CPCSC, a separate lifecycle applies under ISO/IEC 17020.',
-    f: ['Inspection process', 'Stage 1 vs Stage 2', 'Evidence needed']
+    a: 'Certification lifecycle under ISO/IEC 17021-1: (1) Inquiry and eligibility, (2) Application and scope confirmation, (3) Stage 1 readiness review, (4) Stage 2 assessment of implementation, (5) Independent certification decision by personnel who did not audit, (6) Annual surveillance and three-year recertification.',
+    f: ['Stage 1 vs Stage 2', 'Evidence needed', 'Timeline']
   },
   // Provincial privacy
   {
@@ -562,13 +538,13 @@ var KB = [
   // About AICT
   {
     k: ['what does aict', 'about aict', 'who are you', 'what do you do', 'what programs'],
-    a: 'AICT Global Services is an independent conformity assessment body accredited by the Standards Council of Canada. We perform assessment, inspection, and certification focused exclusively on technology. Our accredited scope includes ISO/IEC 27001, ISO/IEC 42001, CyberSecure Canada, and CPCSC. AICT does not provide consulting, implementation, or advisory services.',
+    a: 'AICT Global Services is an independent conformity assessment body applying for accreditation by the Standards Council of Canada. We perform assessment and certification focused exclusively on technology. The scope of accreditation applied for includes ISO/IEC 27001, ISO/IEC 42001, and CyberSecure Canada. AICT does not provide consulting, implementation, or advisory services.',
     f: ['Programs detail', 'Governance', 'Start an inquiry']
   },
   // NIST
   {
     k: ['nist', 'csf', 'cybersecurity framework'],
-    a: 'NIST CSF organizes outcomes into Identify, Protect, Detect, Respond, Recover. Voluntary framework. Maps significantly to ISO 27001 controls. Referenced by CyberSecure Canada and CPCSC.',
+    a: 'NIST CSF organizes outcomes into Identify, Protect, Detect, Respond, Recover. Voluntary framework. Maps significantly to ISO 27001 controls. Referenced by CyberSecure Canada.',
     f: ['NIST vs ISO 27001', 'CIS Controls', 'Which framework?']
   },
   // Timelines
@@ -580,7 +556,7 @@ var KB = [
   // Independence / impartiality
   {
     k: ['independence', 'impartial', 'no consulting', 'conflict'],
-    a: 'AICT maintains structural independence between assessment and certification decisions. The person making a certification decision is never the person who conducted the audit. A two-year cooling-off period applies for prior consulting relationships. AICT does not provide consulting, implementation, or advisory services -- this is a structural requirement of our accreditation.',
+    a: 'AICT maintains structural independence between assessment and certification decisions. The person making a certification decision is never the person who conducted the audit. A two-year cooling-off period applies for prior consulting relationships. AICT\'s two Directors also hold roles in two separate advisory companies, and AICT does not certify any organization those companies advised within the preceding two years. AICT does not provide consulting, implementation, or advisory services -- this is a structural requirement of ISO/IEC 17021-1.',
     f: ['Governance', 'Complaints process', 'Accreditation']
   },
   // Evidence / documentation
@@ -592,13 +568,13 @@ var KB = [
   // Accreditation / SCC
   {
     k: ['accredit', 'scc', 'standards council', 'trust chain', 'iaf', 'ilac'],
-    a: 'Accredited by SCC under MSAP (ISO 27001, 42001 certification) and IBAP (CPCSC inspection). CyberSecure in scope. Through IAF/ILAC multilateral recognition, certifications carry international standing.',
+    a: 'AICT has applied to the Standards Council of Canada (SCC) for accreditation under the Management Systems Accreditation Program (MSAP) to ISO/IEC 17021-1, covering ISO/IEC 27001 and ISO/IEC 42001 certification with CyberSecure Canada in scope. Accreditation is in progress. Once granted, IAF/ILAC multilateral recognition gives certifications international standing.',
     f: ['What is SCC?', 'International recognition', 'Programs']
   },
   // Which framework to choose
   {
     k: ['which framework', 'which standard', 'recommend', 'choose', 'what should'],
-    a: 'Depends on context. Government supplier: CyberSecure Canada or ISO 27001 + PBMM. Defence: CPCSC required. Global customers: ISO 27001. AI systems: ISO 42001. Financial: PCI DSS or SWIFT CSP. Automotive: TISAX. Energy: NERC CIP + IEC 62443. Critical infrastructure: IEC 62443. Many pursue multiple through integrated audits.',
+    a: 'Depends on context. Government supplier: CyberSecure Canada or ISO 27001 + PBMM. Defence: ISO 27001 + PBMM. Global customers: ISO 27001. AI systems: ISO 42001. Financial: PCI DSS or SWIFT CSP. Automotive: TISAX. Energy: NERC CIP + IEC 62443. Critical infrastructure: IEC 62443. Many pursue multiple through integrated audits.',
     f: ['Start an inquiry', 'Regulatory landscape', 'Integrated audits']
   },
   // EU AI Act
@@ -607,17 +583,11 @@ var KB = [
     a: 'EU AI Act: risk-based regulation with prohibited, high-risk, limited, minimal categories. Applies in EU but key international reference. ISO 42001 aligns with governance expectations for high-risk systems.',
     f: ['42001 details', 'AIDA / AIMS', 'OECD AI Principles']
   },
-  // Inspection vs certification
+  // Inspection (not offered)
   {
-    k: ['inspection', '17020', 'difference inspection certification', 'assessment vs'],
-    a: 'Certification (ISO/IEC 17021-1) formally determines management system conformity through a structured audit lifecycle: inquiry, application, Stage 1 readiness, Stage 2 assessment, independent decision, and surveillance. Inspection (ISO/IEC 17020) verifies specific controls, environments, and security measures through on-site evaluation: inquiry, application, planning, on-site inspection, report, and independent decision. AICT performs certification (ISO 27001, 42001, CyberSecure Canada) and inspection (CPCSC). Both require structural independence between assessment and decision functions.',
-    f: ['Inspection process', 'Certification process', 'CPCSC']
-  },
-  // Inspection process
-  {
-    k: ['inspection process', 'how inspection', 'inspection lifecycle', 'inspection steps', 'cpcsc process'],
-    a: 'Inspection lifecycle under ISO/IEC 17020: (1) Inquiry and eligibility screening, (2) Application and contract with inspector assignment, (3) Inspection planning covering locations, processes, and evidence requirements, (4) On-site inspection with physical verification of controls against CPCSC requirements, (5) Inspection report with findings and required corrective actions, (6) Independent decision on conformity status with ongoing monitoring schedule. Inspection reports are issued directly to clients and are not listed in the certificate register.',
-    f: ['CPCSC', 'Inspection vs certification', 'Defence procurement']
+    k: ['inspection', 'difference inspection certification', 'assessment vs'],
+    a: 'AICT performs management system certification under ISO/IEC 17021-1 for ISO/IEC 27001, ISO/IEC 42001, and CyberSecure Canada. AICT does not offer inspection services. Certification determines management system conformity through a structured audit lifecycle: inquiry, application, Stage 1 readiness, Stage 2 assessment, independent decision, and surveillance.',
+    f: ['Certification process', 'Programs', 'Start an inquiry']
   },
   // Cloud standards
   {
@@ -631,7 +601,7 @@ var KB = [
   // Conformity Assessment Body
   {
     k: ['conformity assessment', 'cab', 'certification body', 'what is a cab', 'assessment body'],
-    a: 'A Conformity Assessment Body (CAB) performs conformity assessment services such as testing, inspection, or certification. CABs operate under accreditation from a national body (in Canada, SCC) which verifies competence, impartiality, and consistent operation. AICT is a CAB accredited for both management system certification (ISO/IEC 17021-1) and inspection (ISO/IEC 17020).',
+    a: 'A Conformity Assessment Body (CAB) performs conformity assessment services such as testing, inspection, or certification. CABs operate under accreditation from a national body (in Canada, SCC) which verifies competence, impartiality, and consistent operation. AICT is a CAB applying for SCC accreditation for management system certification (ISO/IEC 17021-1).',
     f: ['What is SCC?', 'How does accreditation work?', 'AICT programs']
   },
   // CyberSecure 13 control areas
@@ -778,7 +748,7 @@ var KB = [
   // Regulatory landscape overview
   {
     k: ['regulatory landscape', 'landscape', 'regulation overview', 'all regulations', 'master list'],
-    a: 'The Canadian technology regulatory landscape includes: PIPEDA/Provincial Privacy (maps to 27701+27001+27018), AIDA (maps to 42001+27001, recommended), Defence Procurement (CPCSC+27001+PBMM, required), Government Procurement (CyberSecure or 27001+PBMM, expected), Cloud/SaaS (27001+27017+27018+PBMM, expected), Critical Infrastructure (IEC 62443+27001+22301, expected), Energy (NERC CIP+IEC 62443+27019+27001, required), Payment Processing (PCI DSS+27001, required), Financial Network (SWIFT CSP+27001, required), Automotive (TISAX+27001, required).',
+    a: 'The Canadian technology regulatory landscape includes: PIPEDA/Provincial Privacy (maps to 27701+27001+27018), AIDA (maps to 42001+27001, recommended), Defence Procurement (27001+PBMM, expected), Government Procurement (CyberSecure or 27001+PBMM, expected), Cloud/SaaS (27001+27017+27018+PBMM, expected), Critical Infrastructure (IEC 62443+27001+22301, expected), Energy (NERC CIP+IEC 62443+27019+27001, required), Payment Processing (PCI DSS+27001, required), Financial Network (SWIFT CSP+27001, required), Automotive (TISAX+27001, required).',
     f: ['Which framework?', 'Start an inquiry', 'Programs']
   }
 ];
@@ -821,14 +791,14 @@ function fKB(q) {
     if (l.match(/auto|vehicle|oem|tisax/)) sig.push('auto');
     if (l.match(/critical infra|scada|ot |operational tech/)) sig.push('crit');
     if (l.match(/quebec|qc|law 25|loi 25/)) sig.push('qc');
-    if (l.match(/british columbia|bc|vancouver/)) sig.push('bc');
+    if (l.match(/british columbia|bc|lower mainland|furry creek/)) sig.push('bc');
     if (l.match(/alberta|ab|calgary|edmonton/)) sig.push('ab');
 
     if (sig.length >= 2) {
       var p = [];
       if (sig.indexOf('saas') !== -1) p.push('SaaS/Cloud: ISO 27001 + 27017/27018 + PBMM for government cloud hosting.');
       if (sig.indexOf('ai') !== -1) p.push('AI systems: ISO 42001 + ISO 27001 foundation. Aligned with proposed AIDA.');
-      if (sig.indexOf('def') !== -1) p.push('Defence supply chain: CPCSC inspection required + ISO 27001 + PBMM for Protected B environments.');
+      if (sig.indexOf('def') !== -1) p.push('Defence supply chain: ISO 27001 + PBMM for Protected B environments.');
       if (sig.indexOf('priv') !== -1) p.push('Personal data: ISO 27701 + 27001 + 27018 maps to PIPEDA and provincial privacy.');
       if (sig.indexOf('govt') !== -1) p.push('Government supplier: CyberSecure Canada or ISO 27001 + PBMM. Status: Expected.');
       if (sig.indexOf('sme') !== -1) p.push('As an SME, CyberSecure Canada is an accessible starting point with a clear path to ISO 27001.');
@@ -963,7 +933,7 @@ document.querySelectorAll('.rv').forEach(function(el) {
   ob.observe(el);
 });
 
-document.querySelectorAll('.pg:not(.open), .gov-cell, .ref-card, .insp-card, .cm-card, .doc-card').forEach(function(el, i) {
+document.querySelectorAll('.pg:not(.open), .gov-cell, .ref-card, .cm-card, .doc-card').forEach(function(el, i) {
   el.style.opacity = '0';
   el.style.transform = 'translateY(6px)';
   el.style.transition = 'opacity .35s var(--ease) ' + Math.min(i * 35, 280) + 'ms, transform .35s var(--ease) ' + Math.min(i * 35, 280) + 'ms';

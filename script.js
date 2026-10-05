@@ -870,11 +870,7 @@ function sM() {
 
 // === CERTIFICATE REGISTER ===
 
-var certDb = [
-  { org: 'Demo Organization Ltd.', std: 'ISO/IEC 27001:2022', scope: 'Information security management for cloud services and supporting infrastructure.', cert: 'AICT-27001-2026-001', status: 'active', issued: '2026-01-15', expiry: '2029-01-14' },
-  { org: 'Example AI Corp.', std: 'ISO/IEC 42001:2023', scope: 'AI management system for development and deployment of machine learning products.', cert: 'AICT-42001-2026-001', status: 'active', issued: '2026-02-01', expiry: '2029-01-31' },
-  { org: 'Sample Tech Inc.', std: 'CyberSecure Canada', scope: 'Baseline cybersecurity controls for managed IT services.', cert: 'AICT-CSC-2026-001', status: 'active', issued: '2025-11-01', expiry: '2026-10-31' }
-];
+var certDb = [];
 
 function runVfy() {
   var q = document.getElementById('vfyQ').value.toLowerCase().trim();

@@ -498,8 +498,8 @@ var KB = [
   // CyberSecure Canada
   {
     k: ['cybersecure', 'cyber secure', 'cybersecure canada'],
-    a: 'CyberSecure Canada is a Government of Canada certification program for SMEs. Validates baseline cybersecurity across thirteen control areas including incident response, access control, patching, malware protection, and awareness. Certification is delivered through SCC accredited certification bodies.',
-    f: ['CyberSecure vs 27001', '13 control areas', 'Timeline']
+    a: 'CyberSecure Canada is a Government of Canada certification program for SMEs. Certification is against CAN/DGSI 104:2021 / Rev 1:2024 at Level 1 or Level 2, whose requirement areas cover leadership, accountability, cyber security training, risk assessment, incident response, patching, security software, secure configuration, strong user authentication, backup and encryption, perimeter defences, access control and authorization, secure mobility, secure cloud and outsourced IT services, secure websites, secure portable media, point of sale and financial systems, and security log management. Certification is delivered through SCC accredited certification bodies.',
+    f: ['CyberSecure vs 27001', 'Requirement areas', 'Timeline']
   },
   // Defence Procurement
   {
@@ -558,13 +558,13 @@ var KB = [
   // Independence / impartiality
   {
     k: ['independence', 'impartial', 'no consulting', 'conflict'],
-    a: 'AICT maintains structural independence between assessment and certification decisions. The person making a certification decision is never the person who conducted the audit. A two-year cooling-off period applies for prior consulting relationships. AICT\'s two Directors also hold roles in two separate advisory companies, and AICT does not certify any organization those companies advised within the preceding two years. AICT does not provide consulting, implementation, or advisory services -- this is a structural requirement of ISO/IEC 17021-1.',
+    a: 'AICT maintains structural independence between assessment and certification decisions. The person making a certification decision is never the person who conducted the audit. A two-year cooling-off period applies for prior consulting relationships. AICT\'s two Directors also hold roles in a related advisory corporation, Ascio Consultancy Incorporated, operating as ascio and as Unlock Solutions, and AICT does not certify any organization that corporation advised within the preceding two years. AICT does not provide consulting, implementation, or advisory services -- this is a structural requirement of ISO/IEC 17021-1.',
     f: ['Governance', 'Complaints process', 'Accreditation']
   },
   // Evidence / documentation
   {
     k: ['evidence', 'documentation', 'what do i need', 'prepare', 'readiness'],
-    a: 'Varies by standard. ISO 27001: security policies, risk assessments, treatment plans, asset inventories, access controls, incident records, internal audits. ISO 42001: AI governance policies, AI risk assessments, lifecycle docs, monitoring. CyberSecure: 13 control domains.',
+    a: 'Varies by standard. ISO 27001: security policies, risk assessments, treatment plans, asset inventories, access controls, incident records, internal audits. ISO 42001: AI governance policies, AI risk assessments, lifecycle docs, monitoring. CyberSecure: evidence for each Level 1 or Level 2 requirement of CAN/DGSI 104:2021 / Rev 1:2024 in scope.',
     f: ['27001 evidence', '42001 evidence', 'Start an inquiry']
   },
   // Accreditation / SCC
@@ -606,10 +606,10 @@ var KB = [
     a: 'A Conformity Assessment Body (CAB) performs conformity assessment services such as testing, inspection, or certification. CABs operate under accreditation from a national body (in Canada, SCC) which verifies competence, impartiality, and consistent operation. AICT is a CAB applying for SCC accreditation for management system certification (ISO/IEC 17021-1).',
     f: ['What is SCC?', 'How does accreditation work?', 'AICT programs']
   },
-  // CyberSecure 13 control areas
+  // CyberSecure requirement areas
   {
-    k: ['13 control', 'control areas', 'cybersecure controls', 'baseline controls'],
-    a: 'CyberSecure Canada covers 13 control areas: (1) Incident response plan, (2) Patching OS and applications, (3) Enable security software, (4) Securely configure devices, (5) Strong user authentication, (6) Employee awareness training, (7) Backup and encrypt data, (8) Secure mobility, (9) Perimeter security, (10) Secure cloud and outsourced IT, (11) Secure websites, (12) Access control and authorization, (13) Secure portable media.',
+    k: ['13 control', 'control areas', 'requirement areas', 'cybersecure controls', 'baseline controls'],
+    a: 'CyberSecure Canada certification is against CAN/DGSI 104:2021 / Rev 1:2024. The standard sets Level 1 and Level 2 requirements in three groups: organizational controls (leadership, accountability, cyber security training, cyber security risk assessment), baseline controls (incident response plan, automatic patching of operating systems and applications, security software, secure configuration, strong user authentication, backup and encryption of data, basic perimeter defences, access control and authorization) and specific controls (secure mobility, secure cloud and outsourced IT services, secure websites, secure portable media, point of sale and financial systems, computer security log management). The audit covers the requirements of the Level sought.',
     f: ['CyberSecure vs ISO 27001', 'How to get certified', 'Who needs CyberSecure?']
   },
   // AI governance definition
